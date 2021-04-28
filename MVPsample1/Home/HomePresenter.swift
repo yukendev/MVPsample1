@@ -9,7 +9,8 @@ import Foundation
 
 protocol HomePresenterInput {
     func getAllMusics()
-    func searchMusics()
+    func didTapSearchButton(searchWord: String?)
+    func didtapMusicCell()
 }
 
 protocol HomePresenterOutput {
@@ -26,15 +27,25 @@ class HomePresenter: HomePresenterInput {
         self.model = model
     }
     
-    
+    //楽曲全取得
     func getAllMusics() {
         model.getAll { (musics) in
             self.view.reloadMusics(musics: musics)
         }
     }
     
-    func searchMusics() {
-        print("検索条件にあった楽曲を取得")
+    //検索ボタンがタップされたとき
+    func didTapSearchButton(searchWord: String?) {
+        guard let searchWord = searchWord else { return }
+        guard !searchWord.isEmpty else { return }
+        model.search(searchWord: searchWord) { (musics) in
+            self.view.reloadMusics(musics: musics)
+        }
+    }
+    
+    //楽曲セルがタップされた時
+    func didtapMusicCell() {
+        <#code#>
     }
     
     

@@ -60,8 +60,14 @@ extension HomeViewController: UITableViewDelegate {
 
 extension HomeViewController: HomePresenterOutput {
     func reloadMusics(musics: [Music]) {
-        print("reloadします")
         self.musics = musics
         self.tableView.reloadData()
+    }
+}
+
+
+extension HomeViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        presenter.didTapSearchButton(searchWord: searchBar.text)
     }
 }

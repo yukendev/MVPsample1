@@ -23,12 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // rootViewController にルートにしたい ViewController を指定
         // UIStoryboard の instantiateInitialViewController() を使用して
         // Storyboard から ViewController を生成
-        let view = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController() as! HomeViewController
-        let getMusicModel: GetMusicModel = GetMusicModel()
-        let playMusicModel: PlayMusicModel = PlayMusicModel()
-        let presenter = HomePresenter(view: view, getMusicModel: getMusicModel, playMusicModel: playMusicModel)
-        view.inject(presenter: presenter)
-        window?.rootViewController = view
+        let mainTabBarController = MainTabBarController()
+        window?.rootViewController = mainTabBarController
         window?.makeKeyAndVisible()
     }
     

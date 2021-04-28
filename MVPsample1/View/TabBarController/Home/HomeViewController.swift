@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MusicCellDelegate {
+    func toMusicDetail(musicID: String)
+}
+
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -44,6 +48,8 @@ extension HomeViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "musicCell") as! MusicTableViewCell
         let music = musics[indexPath.row]
         
+        cell.music = music
+        
         cell.musicTitleLabel.text = music.title
         
         return cell
@@ -71,5 +77,12 @@ extension HomeViewController: HomePresenterOutput {
 extension HomeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         presenter.didTapSearchButton(searchWord: searchBar.text)
+    }
+}
+
+
+extension HomeViewController: MusicCellDelegate {
+    func toMusicDetail(musicID: String) {
+        print("IDが\(musicID)の楽曲詳細へ遷移します")
     }
 }

@@ -13,6 +13,10 @@ class MusicTableViewCell: UITableViewCell {
     @IBOutlet weak var musicImageView: UIImageView!
     @IBOutlet weak var musicTitleLabel: UILabel!
     
+    //表示するMusicを保持
+    var music: Music!
+    
+    var delegate: MusicCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +28,10 @@ class MusicTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @IBAction func toDetailButton(_ sender: Any) {
+        delegate?.toMusicDetail(musicID: self.music.id)
+    }
+    
     
 }

@@ -24,19 +24,28 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ph3-J3-eIP">
-                        <rect key="frame" x="97" y="29" width="207" height="24"/>
+                        <rect key="frame" x="84" y="29" width="190" height="24"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="207" id="G77-63-ZBf"/>
+                            <constraint firstAttribute="width" constant="190" id="G77-63-ZBf"/>
                             <constraint firstAttribute="height" constant="24" id="fKk-ay-Gyq"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfV-dL-yDT">
+                        <rect key="frame" x="298" y="30" width="16" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" image="greaterthan" catalog="system"/>
+                        <connections>
+                            <action selector="toDetailButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="I6s-ya-9aU"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="anQ-5O-8gA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="82z-kB-BXy"/>
-                    <constraint firstAttribute="trailing" secondItem="Ph3-J3-eIP" secondAttribute="trailing" constant="16" id="TtT-tB-bOs"/>
+                    <constraint firstAttribute="trailing" secondItem="Ph3-J3-eIP" secondAttribute="trailing" constant="46" id="ILK-3W-Utg"/>
                     <constraint firstItem="Ph3-J3-eIP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dcw-G9-yjz"/>
                     <constraint firstAttribute="bottom" secondItem="anQ-5O-8gA" secondAttribute="bottom" constant="11" id="tYp-Io-igl"/>
                     <constraint firstItem="anQ-5O-8gA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="wcF-qz-5yh"/>
@@ -50,4 +59,7 @@
             <point key="canvasLocation" x="140.57971014492756" y="118.52678571428571"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="greaterthan" catalog="system" width="128" height="111"/>
+    </resources>
 </document>

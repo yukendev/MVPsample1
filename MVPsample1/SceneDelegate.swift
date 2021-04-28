@@ -24,8 +24,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // UIStoryboard の instantiateInitialViewController() を使用して
         // Storyboard から ViewController を生成
         let view = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController() as! HomeViewController
-        let model: GetMusic = GetMusic()
-        let presenter = HomePresenter(view: view, model: model)
+        let getMusicModel: GetMusicModel = GetMusicModel()
+        let playMusicModel: PlayMusicModel = PlayMusicModel()
+        let presenter = HomePresenter(view: view, getMusicModel: getMusicModel, playMusicModel: playMusicModel)
         view.inject(presenter: presenter)
         window?.rootViewController = view
         window?.makeKeyAndVisible()

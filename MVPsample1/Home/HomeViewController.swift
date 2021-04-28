@@ -54,7 +54,9 @@ extension HomeViewController: UITableViewDataSource {
 
 
 extension HomeViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didTapMusicCell(selectedMusic: musics[indexPath.row], musics: self.musics)
+    }
 }
 
 

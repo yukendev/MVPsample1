@@ -10,7 +10,7 @@ import Foundation
 protocol HomePresenterInput {
     func getAllMusics()
     func didTapSearchButton(searchWord: String?)
-    func didtapMusicCell()
+    func didTapMusicCell(selectedMusic: Music, musics: [Music])
 }
 
 protocol HomePresenterOutput {
@@ -19,17 +19,20 @@ protocol HomePresenterOutput {
 
 class HomePresenter: HomePresenterInput {
     
-    var view: HomePresenterOutput
-    var model: GetMusicInput
     
-    init(view: HomePresenterOutput, model: GetMusicInput) {
+    var view: HomePresenterOutput
+    var getMusicModel: GetMusicModelInput
+    var playMusicModel: PlayMusicModel
+    
+    init(view: HomePresenterOutput, getMusicModel: GetMusicModelInput, playMusicModel: PlayMusicModel) {
         self.view = view
-        self.model = model
+        self.getMusicModel = getMusicModel
+        self.playMusicModel = playMusicModel
     }
     
     //楽曲全取得
     func getAllMusics() {
-        model.getAll { (musics) in
+        getMusicModel.getAll { (musics) in
             self.view.reloadMusics(musics: musics)
         }
     }
@@ -38,14 +41,20 @@ class HomePresenter: HomePresenterInput {
     func didTapSearchButton(searchWord: String?) {
         guard let searchWord = searchWord else { return }
         guard !searchWord.isEmpty else { return }
-        model.search(searchWord: searchWord) { (musics) in
+        getMusicModel.search(searchWord: searchWord) { (musics) in
             self.view.reloadMusics(musics: musics)
         }
     }
     
     //楽曲セルがタップされた時
-    func didtapMusicCell() {
-        <#code#>
+    func didTapMusicCell(selectedMusic: Music, musics: [Music]) {
+        //全ての楽曲を、選択された楽曲を0番目とした配列に整形
+        guard let selectedIndex = musics.firstIndex(where: { $0.id == selectedMusic.id }) else {
+            return
+        }
+        let willPlayMusics: [Music] = musics.suffix(musics.count - selectedIndex - 1)
+        playMusicModel.setUpMusics(musics: willPlayMusics)
+        playMusicModel.playMusic()
     }
     
     

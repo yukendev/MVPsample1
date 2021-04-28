@@ -14,6 +14,8 @@
 		4527121F2638F1DD006CF0FD /* MusicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4527121D2638F1DD006CF0FD /* MusicTableViewCell.xib */; };
 		452712272638F459006CF0FD /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452712262638F459006CF0FD /* Music.swift */; };
 		457D92352639021400F356FA /* MusicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457D92342639021400F356FA /* MusicList.swift */; };
+		458CE41426397DB9004C3920 /* PlayMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CE41326397DB9004C3920 /* PlayMusicModel.swift */; };
+		458CE41D26398863004C3920 /* MusicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CE41C26398863004C3920 /* MusicError.swift */; };
 		45963FEA2638D44800BDB702 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45963FE92638D44800BDB702 /* AppDelegate.swift */; };
 		45963FEC2638D44800BDB702 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45963FEB2638D44800BDB702 /* SceneDelegate.swift */; };
 		45963FF32638D44B00BDB702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45963FF22638D44B00BDB702 /* Assets.xcassets */; };
@@ -24,7 +26,7 @@
 		459640362638EC1D00BDB702 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459640352638EC1D00BDB702 /* Home.storyboard */; };
 		4596403B2638EC2900BDB702 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4596403A2638EC2900BDB702 /* HomeViewController.swift */; };
 		459640442638F04800BDB702 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459640432638F04800BDB702 /* HomePresenter.swift */; };
-		45E728FB26391E3E0003DED0 /* GetMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E728FA26391E3E0003DED0 /* GetMusic.swift */; };
+		45E728FB26391E3E0003DED0 /* GetMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E728FA26391E3E0003DED0 /* GetMusicModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		4527121D2638F1DD006CF0FD /* MusicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicTableViewCell.xib; sourceTree = "<group>"; };
 		452712262638F459006CF0FD /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		457D92342639021400F356FA /* MusicList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicList.swift; sourceTree = "<group>"; };
+		458CE41326397DB9004C3920 /* PlayMusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMusicModel.swift; sourceTree = "<group>"; };
+		458CE41C26398863004C3920 /* MusicError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicError.swift; sourceTree = "<group>"; };
 		45963FE62638D44800BDB702 /* MVPsample1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPsample1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45963FE92638D44800BDB702 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45963FEB2638D44800BDB702 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +72,7 @@
 		459640352638EC1D00BDB702 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		4596403A2638EC2900BDB702 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		459640432638F04800BDB702 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		45E728FA26391E3E0003DED0 /* GetMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMusic.swift; sourceTree = "<group>"; };
+		45E728FA26391E3E0003DED0 /* GetMusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMusicModel.swift; sourceTree = "<group>"; };
 		55EFDC3F5C0E658EF631A5EA /* Pods_MVPsample1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPsample1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D42663AF39DDF6D2673319 /* Pods-MVPsample1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPsample1Tests.release.xcconfig"; path = "Target Support Files/Pods-MVPsample1Tests/Pods-MVPsample1Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D1A3B7B025F3BA683AC814DF /* Pods-MVPsample1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPsample1Tests.debug.xcconfig"; path = "Target Support Files/Pods-MVPsample1Tests/Pods-MVPsample1Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,9 +141,18 @@
 			path = MusicCell;
 			sourceTree = "<group>";
 		};
+		458CE41B2639884B004C3920 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				458CE41C26398863004C3920 /* MusicError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		45963FDD2638D44800BDB702 = {
 			isa = PBXGroup;
 			children = (
+				458CE41B2639884B004C3920 /* Errors */,
 				4596401C2638D77B00BDB702 /* Config */,
 				45963FE82638D44800BDB702 /* MVPsample1 */,
 				45963FFF2638D44B00BDB702 /* MVPsample1Tests */,
@@ -208,7 +221,8 @@
 				459640432638F04800BDB702 /* HomePresenter.swift */,
 				452712262638F459006CF0FD /* Music.swift */,
 				457D92342639021400F356FA /* MusicList.swift */,
-				45E728FA26391E3E0003DED0 /* GetMusic.swift */,
+				45E728FA26391E3E0003DED0 /* GetMusicModel.swift */,
+				458CE41326397DB9004C3920 /* PlayMusicModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -453,8 +467,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				45963FEA2638D44800BDB702 /* AppDelegate.swift in Sources */,
+				458CE41D26398863004C3920 /* MusicError.swift in Sources */,
 				45963FEC2638D44800BDB702 /* SceneDelegate.swift in Sources */,
-				45E728FB26391E3E0003DED0 /* GetMusic.swift in Sources */,
+				45E728FB26391E3E0003DED0 /* GetMusicModel.swift in Sources */,
+				458CE41426397DB9004C3920 /* PlayMusicModel.swift in Sources */,
 				459640242638DAAB00BDB702 /* Config.swift in Sources */,
 				459640442638F04800BDB702 /* HomePresenter.swift in Sources */,
 				452712272638F459006CF0FD /* Music.swift in Sources */,

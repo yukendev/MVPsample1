@@ -10,6 +10,7 @@ import Alamofire
 
 struct Music: Codable {
     
+    var id: String
     var title: String
     var img: String?
     var imgData: Data? {

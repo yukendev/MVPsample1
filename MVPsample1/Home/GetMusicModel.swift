@@ -10,13 +10,13 @@ import Alamofire
 
 
 //presenterから移譲される処理
-protocol GetMusicInput {
+protocol GetMusicModelInput {
     func search(searchWord: String, completion: @escaping(_ musics: [Music]) -> Void)
     func getAll(completion: @escaping(_ musics: [Music]) -> Void)
 }
 
 
-class GetMusic: GetMusicInput {
+class GetMusicModel: GetMusicModelInput {
     //検索処理
     func search(searchWord: String, completion: @escaping ([Music]) -> Void) {
         let headers: HTTPHeaders = ["Content-Type": "application/json"]

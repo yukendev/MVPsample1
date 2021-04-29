@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="anQ-5O-8gA">
-                        <rect key="frame" x="16" y="11" width="60" height="60"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="anQ-5O-8gA">
+                        <rect key="frame" x="16" y="11.5" width="60" height="59"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="cBr-vo-Hut"/>
                             <constraint firstAttribute="width" constant="60" id="nqq-pU-vZP"/>
@@ -33,9 +33,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfV-dL-yDT">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfV-dL-yDT">
                         <rect key="frame" x="298" y="30" width="16" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="7BS-ay-j55"/>
+                            <constraint firstAttribute="height" constant="22" id="hnb-jX-f4C"/>
+                        </constraints>
                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" image="greaterthan" catalog="system"/>
                         <connections>
@@ -46,8 +49,11 @@
                 <constraints>
                     <constraint firstItem="anQ-5O-8gA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="82z-kB-BXy"/>
                     <constraint firstAttribute="trailing" secondItem="Ph3-J3-eIP" secondAttribute="trailing" constant="46" id="ILK-3W-Utg"/>
+                    <constraint firstItem="CfV-dL-yDT" firstAttribute="leading" secondItem="Ph3-J3-eIP" secondAttribute="trailing" constant="24" id="Oaz-Um-UhR"/>
                     <constraint firstItem="Ph3-J3-eIP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dcw-G9-yjz"/>
+                    <constraint firstAttribute="trailing" secondItem="CfV-dL-yDT" secondAttribute="trailing" constant="6" id="idc-61-cia"/>
                     <constraint firstAttribute="bottom" secondItem="anQ-5O-8gA" secondAttribute="bottom" constant="11" id="tYp-Io-igl"/>
+                    <constraint firstItem="CfV-dL-yDT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tjj-Y9-V25"/>
                     <constraint firstItem="anQ-5O-8gA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="wcF-qz-5yh"/>
                 </constraints>
             </tableViewCellContentView>
@@ -61,5 +67,6 @@
     </objects>
     <resources>
         <image name="greaterthan" catalog="system" width="128" height="111"/>
+        <image name="music.note" catalog="system" width="97" height="128"/>
     </resources>
 </document>

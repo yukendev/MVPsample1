@@ -19,17 +19,19 @@ class MainTabBarController: UITabBarController {
 
 extension MainTabBarController {
     private func setUp() {
-        let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "home") as! HomeViewController
+        let homeStoryBoard = UIStoryboard(name: "Home", bundle: nil)
+        let homeVC = homeStoryBoard.instantiateViewController(withIdentifier: "home") as! HomeViewController
         homeVC.tabBarItem = UITabBarItem(title: "home", image: UIImage(systemName: "house.fill"), tag: 0)
         let getMusicModel: GetMusicModel = GetMusicModel()
         let playMusicModel: PlayMusicModel = PlayMusicModel()
         let presenter = HomePresenter(view: homeVC, getMusicModel: getMusicModel, playMusicModel: playMusicModel)
         homeVC.inject(presenter: presenter)
         
+        let homeNavigationController = UINavigationController(rootViewController: homeVC)
         
         
         let profileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "profile")
         profileVC.tabBarItem = UITabBarItem(title: "profile", image: UIImage(systemName: "person.fill"), tag: 0)
-        viewControllers = [homeVC, profileVC]
+        viewControllers = [homeNavigationController, profileVC]
     }
 }

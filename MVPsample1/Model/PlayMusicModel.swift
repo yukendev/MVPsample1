@@ -24,6 +24,7 @@ class PlayMusicModel:NSObject, MusicPlayerModelInput, AVAudioPlayerDelegate {
     //自身の配列を設定
     func setUpMusics(musics: [Music]) {
         self.musics = musics
+        print("musicsの数: \(musics.count)")
     }
     
     //AVAudioPlayerをインスタンス化

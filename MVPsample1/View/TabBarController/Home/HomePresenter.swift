@@ -52,7 +52,7 @@ class HomePresenter: HomePresenterInput {
         guard let selectedIndex = musics.firstIndex(where: { $0.id == selectedMusic.id }) else {
             return
         }
-        let willPlayMusics: [Music] = musics.suffix(musics.count - selectedIndex - 1)
+        let willPlayMusics: [Music] = musics.suffix(musics.count - selectedIndex)
         playMusicModel.setUpMusics(musics: willPlayMusics)
         playMusicModel.playMusic()
     }

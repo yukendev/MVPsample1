@@ -30,6 +30,14 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+//        title = "Home!"
+        
+        navigationItem.title = "Home"
+        navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.isHidden = false
+        
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "MusicTableViewCell", bundle: nil), forCellReuseIdentifier: "musicCell")
@@ -51,6 +59,8 @@ extension HomeViewController: UITableViewDataSource {
         cell.music = music
         
         cell.musicTitleLabel.text = music.title
+        
+        cell.delegate = self
         
         return cell
     }

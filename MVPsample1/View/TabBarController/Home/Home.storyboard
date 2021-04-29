@@ -21,13 +21,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="楽曲一覧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzB-4D-Eka">
-                                <rect key="frame" x="119" y="44" width="176" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Uf-cp-TQO">
                                 <rect key="frame" x="0.0" y="129" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -37,6 +30,7 @@
                         <viewLayoutGuide key="safeArea" id="e2N-gy-Zgl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="p6I-lu-Lmr"/>
                     <connections>
                         <outlet property="searchBar" destination="9Uf-cp-TQO" id="641-ix-iYo"/>
                         <outlet property="tableView" destination="7L9-Qa-H63" id="BSs-Ik-zEj"/>
@@ -44,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnZ-pk-xBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213.04347826086959" y="130.58035714285714"/>
+            <point key="canvasLocation" x="697.10144927536237" y="130.58035714285714"/>
         </scene>
     </scenes>
     <resources>
